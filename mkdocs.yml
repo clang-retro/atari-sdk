@@ -1,0 +1,30 @@
+# The documentation site: https://clang-retro.github.io/atari-sdk/
+# Build it with `pip install -r .docs/requirements.txt` and `mkdocs serve`.
+INHERIT: .docs/base.yml
+site_name: Atari SDK
+site_description: Atari ST, STe, TT and Falcon programs (TOS and EmuTOS) with clang
+site_url: https://clang-retro.github.io/atari-sdk/
+repo_url: https://github.com/clang-retro/atari-sdk
+repo_name: clang-retro/atari-sdk
+edit_uri: ""
+hooks:
+  - .docs/hooks.py
+
+extra:
+  retro:
+    github: clang-retro/atari-sdk
+    branch: main
+    pages:
+      README.md: index.md
+      README.md#license: license.md
+      CONTRIBUTING.md: contributing.md
+
+nav:
+  - "Home": index.md
+  - "Using the SDK": using.md
+  - "Running programs": running.md
+  - "Building the sysroot": building.md
+  - "Not there yet": status.md
+  - "Contributing": contributing.md
+  - "License": license.md
+  - "All clang-retro projects": https://clang-retro.github.io/dos-sdk/projects/

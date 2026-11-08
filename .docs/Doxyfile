@@ -1,0 +1,9 @@
+# The API reference of the documentation site (api/), run by .docs/hooks.py
+# from the repository's root after `mkdocs build`.
+@INCLUDE               = .docs/Doxyfile.base
+PROJECT_NAME           = "Atari SDK"
+PROJECT_BRIEF          = "osbind, GEM AES and VDI, and Native Features"
+INPUT                  = include \
+                         gem
+FILE_PATTERNS          = *.h *.c
+OPTIMIZE_OUTPUT_FOR_C  = YES
